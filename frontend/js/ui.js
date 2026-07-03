@@ -482,7 +482,7 @@ export const ui = {
       window._selectLayerMaterial = this.onMaterialSelected;
       return Object.keys(state.materialsByCategory).map(catName => {
         const itemsHTML = state.materialsByCategory[catName].map(mat => `
-          <div onclick="window._selectLayerMaterial('${layerId}', '${mat.id}')" class="px-3 py-2.5 text-xs text-foreground/80 hover:bg-background/80 cursor-pointer flex justify-between items-center transition dropdown-item" data-name="${mat.name.toLowerCase()}">
+          <div onclick="window._selectLayerMaterial('${layerId}', '${mat.id}')" class="px-3 py-2.5 text-xs text-foreground/80 hover:bg-background/80 cursor-pointer flex justify-between items-center transition dropdown-item" data-name="${mat.name.toLowerCase()}" data-id="${mat.id}">
             <div class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full ring-1 ring-border/50 shrink-0" style="background-color: ${mat.color}"></span>
               <span class="font-medium text-foreground">${mat.name}</span>
@@ -494,8 +494,10 @@ export const ui = {
         `).join('');
 
         return `
-          <div class="px-3 py-1.5 text-[9px] font-extrabold text-muted-foreground uppercase tracking-wider bg-background/30 border-t border-border/10 first:border-t-0">${catName}</div>
-          <div class="divide-y divide-border/10">${itemsHTML}</div>
+          <div class="dropdown-category-group">
+            <div class="px-3 py-1.5 text-[9px] font-extrabold text-muted-foreground uppercase tracking-wider bg-background/30 border-t border-border/10 first:border-t-0">${catName}</div>
+            <div class="divide-y divide-border/10">${itemsHTML}</div>
+          </div>
         `;
       }).join('');
     };
@@ -1025,13 +1027,25 @@ export const ui = {
   filterDropdown(layerId, query) {
     const menu = document.getElementById(`dropdown-menu-${layerId}`);
     if (!menu) return;
-    const items = menu.querySelectorAll('.dropdown-item');
-    items.forEach(item => {
-      const name = item.dataset.name;
-      if (name.includes(query)) {
-        item.classList.remove('hidden');
+    const groups = menu.querySelectorAll('.dropdown-category-group');
+    groups.forEach(group => {
+      const items = group.querySelectorAll('.dropdown-item');
+      let visibleCount = 0;
+      items.forEach(item => {
+        const name = item.dataset.name || '';
+        const id = item.dataset.id || '';
+        if (name.includes(query) || id.includes(query)) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      
+      if (visibleCount > 0) {
+        group.classList.remove('hidden');
       } else {
-        item.classList.add('hidden');
+        group.classList.add('hidden');
       }
     });
   },

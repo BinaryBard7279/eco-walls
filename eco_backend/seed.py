@@ -45,6 +45,11 @@ def seed_database():
                 material_id = int(id_str)
                 
             name = item["name"]
+            # Clean up LaTeX formulas to make names user-friendly in the UI
+            name = name.replace("$150\\text{ г}$ на $1\\text{ м}^2$", "150 г на 1 м²")
+            name = name.replace("$V_в = 12\\,\\%$", "Vв=12%")
+            name = name.replace("$37\\,\\%$", "37%")
+            
             density_raw = item["density_raw"]
             
             # Make the name unique by appending density info if available
