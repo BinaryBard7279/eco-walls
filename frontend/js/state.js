@@ -35,6 +35,7 @@ export const state = {
   activeStep2Tab: defaultState.activeStep2Tab,
   isManualHdd: defaultState.isManualHdd,
   comfortR: defaultState.comfortR,
+  dbSearchQuery: '',
 
   initLists(materials, cities) {
     this.materials = materials;

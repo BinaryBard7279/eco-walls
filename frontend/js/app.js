@@ -251,6 +251,10 @@ function initEvents() {
     } else if (target.id === 'region-dropdown-search') {
       e.stopPropagation();
       ui.filterRegions(target.value.toLowerCase());
+    } else if (target.id === 'db-materials-search') {
+      e.stopPropagation();
+      state.dbSearchQuery = target.value;
+      ui.renderDatabaseTable(state, state.dbSearchQuery);
     }
   });
 

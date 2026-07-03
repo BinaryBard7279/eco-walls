@@ -390,7 +390,7 @@ export const ui = {
 
     if (DOM.headerExtra) {
       if (state.currentStep === 2) {
-        DOM.headerExtra.innerHTML = `<button id="btn-reset-construct" class="mr-4 inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Начать заново</button> ${state.layers.length} / 5 слоев`;
+        DOM.headerExtra.innerHTML = `<button id="btn-reset-construct" class="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Начать заново</button>`;
       } else if (state.currentStep === 3) {
         DOM.headerExtra.innerHTML = `<button id="btn-reset-results" class="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors"><i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Начать заново</button>`;
       } else {
@@ -627,43 +627,76 @@ export const ui = {
       }
     }
 
-    // Заполнение таблицы верификации (Таблица 2)
-    const dbTableBody = DOM.dbVerificationTableBody;
-    if (dbTableBody) {
-      let rowsHTML = state.layers.map((layer, index) => {
-        const m = state.materialsMap.get(layer.materialId);
-        return `
-          <tr class="hover:bg-panel/40 transition">
-            <td class="py-3 px-3 text-center font-semibold text-[10px] text-muted-foreground">${index + 1}</td>
-            <td class="py-3 px-3 text-[13px] font-semibold text-foreground/90">${m.name}</td>
-            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${Math.round(layer.thickness * 1000)}</td>
-            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${layer.density}</td>
-            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${m.lambda.toFixed(3)}</td>
-            <td class="py-3 px-3 text-center font-mono font-bold text-emerald-600 dark:text-emerald-400">${m.carbon.toFixed(2)}</td>
-            <td class="py-3 px-3 text-center font-mono font-bold text-sky-600 dark:text-sky-400">${m.energy.toFixed(1)}</td>
-          </tr>
-        `;
-      }).join('');
-
-      if (state.reinforcementMass > 0) {
-        const re = state.materialsMap.get('159');
-        rowsHTML += `
-          <tr class="bg-accent-strong/5 border-t border-dashed border-accent-strong/20">
-            <td class="py-3 px-3 text-center font-semibold text-[10px] text-accent-strong">—</td>
-            <td class="py-3 px-3 text-[13px] font-semibold text-accent-strong">Арматурная сетка (сталь)</td>
-            <td class="py-3 px-3 text-center font-mono text-muted-foreground">—</td>
-            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${re.density}</td>
-            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${re.lambda.toFixed(1)}</td>
-            <td class="py-3 px-3 text-center font-mono font-bold text-emerald-600 dark:text-emerald-400">${re.carbon.toFixed(2)}</td>
-            <td class="py-3 px-3 text-center font-mono font-bold text-sky-600 dark:text-sky-400">${re.energy.toFixed(1)}</td>
-          </tr>
-        `;
-      }
-      dbTableBody.innerHTML = rowsHTML;
+    const searchInput = document.getElementById('db-materials-search');
+    if (searchInput && searchInput.value !== (state.dbSearchQuery || "")) {
+      searchInput.value = state.dbSearchQuery || "";
     }
+
+    // Заполнение справочной таблицы базы данных
+    this.renderDatabaseTable(state, state.dbSearchQuery || "");
 
     this.renderWallPreview('wall-preview-container-step2', state);
     lucide.createIcons();
+  },
+
+  renderDatabaseTable(state, query = '') {
+    const dbTableBody = DOM.dbVerificationTableBody;
+    if (!dbTableBody) return;
+
+    const q = query.trim().toLowerCase();
+    
+    // Filter materials by ID, Name or Category
+    let filtered = state.materials || [];
+    if (q) {
+      filtered = filtered.filter(m => 
+        String(m.id).includes(q) ||
+        m.name.toLowerCase().includes(q) || 
+        (m.category && m.category.toLowerCase().includes(q))
+      );
+    }
+    
+    const limit = q ? 30 : 15;
+    const itemsToShow = filtered.slice(0, limit);
+
+    let rowsHTML = itemsToShow.map(m => {
+      const densityVal = m.density !== null && m.density !== undefined ? m.density : '—';
+      const lambdaVal = m.lambda !== null && m.lambda !== undefined ? Number(m.lambda).toFixed(3) : '—';
+      const carbonVal = m.carbon !== null && m.carbon !== undefined ? Number(m.carbon).toFixed(2) : '—';
+      const energyVal = m.energy !== null && m.energy !== undefined ? Number(m.energy).toFixed(1) : '—';
+      
+      return `
+        <tr class="hover:bg-panel/40 transition">
+          <td class="py-3 px-3 text-center font-semibold text-[10px] text-muted-foreground">${m.id}</td>
+          <td class="py-3 px-3 text-[13px] font-semibold text-foreground/90">${m.name}</td>
+          <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${densityVal}</td>
+          <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${lambdaVal}</td>
+          <td class="py-3 px-3 text-center font-mono font-bold text-emerald-600 dark:text-emerald-400">${carbonVal}</td>
+          <td class="py-3 px-3 text-center font-mono font-bold text-sky-600 dark:text-sky-400">${energyVal}</td>
+        </tr>
+      `;
+    }).join('');
+
+    if (itemsToShow.length === 0) {
+      rowsHTML = `
+        <tr>
+          <td colspan="6" class="py-8 text-center text-xs text-muted-foreground">
+            Материалы не найдены по запросу "${query}"
+          </td>
+        </tr>
+      `;
+    }
+
+    dbTableBody.innerHTML = rowsHTML;
+
+    // Update note text dynamically
+    const note = document.getElementById('db-verification-table-note');
+    if (note) {
+      if (q) {
+        note.innerHTML = `* Показано ${itemsToShow.length} из ${filtered.length} найденных материалов по запросу "${query}".${filtered.length > limit ? ' Уточните запрос для более точного поиска.' : ''}`;
+      } else {
+        note.innerHTML = `* Показаны первые 15 материалов из базы данных. Используйте поиск выше, чтобы отфильтровать все ${state.materials.length || 0} доступных наименований.`;
+      }
+    }
   },
 
   updateSingleLayer(id, layer, materialsMap) {
@@ -859,7 +892,7 @@ export const ui = {
     // Инициализация скелета превью при его отсутствии
     if (!container.querySelector('.wall-preview-card')) {
       container.innerHTML = `
-        <div class="wall-preview-card rounded-xl bg-panel ring-1 ring-border/60 p-6 w-full relative transition-all duration-300">
+        <div class="wall-preview-card rounded-xl bg-background ring-1 ring-border/60 shadow-sm p-6 lg:p-7 w-full relative transition-all duration-300">
           <div class="flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-4 px-1">
             <span>Разрез стены</span>
             <span class="text-accent-strong flex gap-6 font-semibold">

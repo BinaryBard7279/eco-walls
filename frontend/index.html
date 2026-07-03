@@ -219,8 +219,8 @@
       </div>
     </section>
 
-    <section id="step-2" class="max-w-[85rem] mx-auto px-6 py-12 w-full hidden">
-      <div class="grid grid-cols-1 xl:grid-cols-[2.6fr_1fr] gap-10">
+    <section id="step-2" class="max-w-[94rem] mx-auto px-6 py-12 w-full hidden">
+      <div class="grid grid-cols-1 xl:grid-cols-[3fr_1.1fr] gap-10">
         <div class="space-y-8">
           <div>
             <div class="flex items-baseline justify-between mb-6">
@@ -249,17 +249,24 @@
 
             <!-- Database Verification Table Tab Content -->
             <div id="step-2-database-view" class="hidden space-y-4">
+              <!-- Search Bar -->
+              <div class="flex items-center gap-3">
+                <div class="relative flex-1">
+                  <i data-lucide="search" class="w-4 h-4 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2"></i>
+                  <input type="text" id="db-materials-search" placeholder="Поиск материалов по названию или категории..." class="w-full pl-9 pr-4 py-2.5 bg-background/50 border border-border/40 rounded-xl text-sm focus:outline-none focus:border-accent-strong transition-all placeholder:text-muted-foreground/60" />
+                </div>
+              </div>
+
               <div class="overflow-x-auto ring-1 ring-border/40 rounded-xl bg-panel">
                 <table class="w-full text-left border-collapse">
                   <thead>
                     <tr class="border-b border-border/40 bg-background/30 text-[12px] font-extrabold text-foreground uppercase tracking-wider leading-normal align-bottom">
-                      <th class="py-3 px-3 w-12 text-center pb-3">№</th>
-                      <th class="py-3 px-3 min-w-[280px] pb-3">Наименование материала</th>
-                      <th class="py-3 px-3 w-24 text-center pb-2">Толщина<br><span class="text-[10px] font-bold text-foreground/75 normal-case">&delta; (мм)</span></th>
-                      <th class="py-3 px-3 w-24 text-center pb-2">Плотность<br><span class="text-[10px] font-bold text-foreground/75 normal-case">&rho; (кг/м³)</span></th>
+                      <th class="py-3 px-3 w-16 text-center pb-3">ID</th>
+                      <th class="py-3 px-3 min-w-[320px] pb-3">Наименование материала</th>
+                      <th class="py-3 px-3 w-28 text-center pb-2">Плотность<br><span class="text-[10px] font-bold text-foreground/75 normal-case">&rho; (кг/м³)</span></th>
                       <th class="py-3 px-3 w-36 text-center pb-2">Теплопроводность<br><span class="text-[10px] font-bold text-foreground/75 normal-case">&lambda; (Вт/(м·°С))</span></th>
-                      <th class="py-3 px-3 w-32 text-center pb-2">Выбросы<br><span class="text-[10px] font-bold text-foreground/75 normal-case">F<sub>A1-3</sub> (кг/кг)</span></th>
-                      <th class="py-3 px-3 w-36 text-center pb-2">Энергия<br><span class="text-[10px] font-bold text-foreground/75 normal-case">e<sub>A1-3</sub> (МДж/кг)</span></th>
+                      <th class="py-3 px-3 w-32 text-center pb-2">Углеродный след<br><span class="text-[10px] font-bold text-foreground/75 normal-case">F<sub>A1-3</sub> (кг CO₂/кг)</span></th>
+                      <th class="py-3 px-3 w-36 text-center pb-2">Воплощенная энергия<br><span class="text-[10px] font-bold text-foreground/75 normal-case">e<sub>A1-3</sub> (МДж/кг)</span></th>
                     </tr>
                   </thead>
                   <tbody id="db-verification-table-body" class="divide-y divide-border/20 text-sm text-foreground/80 font-mono">
