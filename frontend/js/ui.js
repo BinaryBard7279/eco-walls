@@ -634,13 +634,13 @@ export const ui = {
         const m = state.materialsMap.get(layer.materialId);
         return `
           <tr class="hover:bg-panel/40 transition">
-            <td class="py-3 px-4 text-center font-semibold text-[10px] text-muted-foreground">${index + 1}</td>
-            <td class="py-3 px-4 font-semibold text-foreground/90">${m.name}</td>
-            <td class="py-3 px-4 text-center font-mono">${Math.round(layer.thickness * 1000)}</td>
-            <td class="py-3 px-4 text-center font-mono">${layer.density}</td>
-            <td class="py-3 px-4 text-center font-mono">${m.lambda.toFixed(3)}</td>
-            <td class="py-3 px-4 text-center font-mono text-emerald-600 dark:text-emerald-400">${m.carbon.toFixed(2)}</td>
-            <td class="py-3 px-4 text-center font-mono text-sky-600 dark:text-sky-400">${m.energy.toFixed(1)}</td>
+            <td class="py-3 px-3 text-center font-semibold text-[10px] text-muted-foreground">${index + 1}</td>
+            <td class="py-3 px-3 text-[13px] font-semibold text-foreground/90">${m.name}</td>
+            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${Math.round(layer.thickness * 1000)}</td>
+            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${layer.density}</td>
+            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${m.lambda.toFixed(3)}</td>
+            <td class="py-3 px-3 text-center font-mono font-bold text-emerald-600 dark:text-emerald-400">${m.carbon.toFixed(2)}</td>
+            <td class="py-3 px-3 text-center font-mono font-bold text-sky-600 dark:text-sky-400">${m.energy.toFixed(1)}</td>
           </tr>
         `;
       }).join('');
@@ -649,13 +649,13 @@ export const ui = {
         const re = state.materialsMap.get('159');
         rowsHTML += `
           <tr class="bg-accent-strong/5 border-t border-dashed border-accent-strong/20">
-            <td class="py-3 px-4 text-center font-semibold text-[10px] text-accent-strong">—</td>
-            <td class="py-3 px-4 font-semibold text-accent-strong">Арматурная сетка (сталь)</td>
-            <td class="py-3 px-4 text-center font-mono text-muted-foreground">—</td>
-            <td class="py-3 px-4 text-center font-mono">${re.density}</td>
-            <td class="py-3 px-4 text-center font-mono">${re.lambda.toFixed(1)}</td>
-            <td class="py-3 px-4 text-center font-mono text-emerald-600 dark:text-emerald-400 font-semibold">${re.carbon.toFixed(2)}</td>
-            <td class="py-3 px-4 text-center font-mono text-sky-600 dark:text-sky-400 font-semibold">${re.energy.toFixed(1)}</td>
+            <td class="py-3 px-3 text-center font-semibold text-[10px] text-accent-strong">—</td>
+            <td class="py-3 px-3 text-[13px] font-semibold text-accent-strong">Арматурная сетка (сталь)</td>
+            <td class="py-3 px-3 text-center font-mono text-muted-foreground">—</td>
+            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${re.density}</td>
+            <td class="py-3 px-3 text-center font-mono font-semibold text-foreground/95">${re.lambda.toFixed(1)}</td>
+            <td class="py-3 px-3 text-center font-mono font-bold text-emerald-600 dark:text-emerald-400">${re.carbon.toFixed(2)}</td>
+            <td class="py-3 px-3 text-center font-mono font-bold text-sky-600 dark:text-sky-400">${re.energy.toFixed(1)}</td>
           </tr>
         `;
       }
