@@ -356,13 +356,13 @@ export const ui = {
     this.render(state);
   },
 
-  render(state) {
+  render(state, firstPositions = []) {
     this.renderSidebar(state.currentStep);
     this.renderHeader(state);
     this.toggleViews(state.currentStep);
 
     if (state.currentStep === 1) this.renderStep1(state);
-    if (state.currentStep === 2) this.renderStep2(state);
+    if (state.currentStep === 2) this.renderStep2(state, firstPositions);
     if (state.currentStep === 3) this.renderStep3(state);
 
     lucide.createIcons();
@@ -425,7 +425,7 @@ export const ui = {
   renderStep1(state) {
     const listContainer = DOM.regionsItemsContainer;
     if (listContainer && !listContainer.children.length) {
-      const onSelect = 'window._onRegionSelect';
+      const onSelect = window._onRegionSelect;
       let citiesHTML = state.cities.map(c => Templates.cityItem(c, onSelect)).join('');
       citiesHTML += Templates.cityManualItem(onSelect);
       listContainer.innerHTML = citiesHTML;

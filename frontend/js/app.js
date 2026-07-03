@@ -14,53 +14,61 @@ function recalculateAndRefreshPreview() {
   ui.renderWallPreview('wall-preview-container-step2', state);
 }
 
-async function triggerRender(firstPositions = []) {
-  let metrics;
-  try {
-    metrics = await api.calculateWallMetrics(state);
-  } catch (err) {
-    console.warn("Backend calculation failed, falling back to local calculation:", err);
-    const R0 = Calc.calculateThermalResistance(state.layers, state.materialsMap);
-    const weight = Calc.calculateTotalWeight(state.layers, state.reinforcementMass);
-    const co2 = Calc.calculateCarbonFootprint(state.layers, state.reinforcementMass, state.materialsMap);
-    const energy = Calc.calculateEmbodiedEnergy(state.layers, state.reinforcementMass, state.materialsMap);
-    const reqR = Calc.calculateRequiredR(state.hdd);
-    const meetsNorm = R0 >= reqR;
-    const totalCO2 = co2 * (state.wallArea || 0);
-    const payback_years = Calc.calculatePaybackPeriod(state.layers, state.reinforcementMass, state.hdd, state.materialsMap);
-    const paybackText = payback_years > 100 ? "Более 100 лет (избыточно)" : `${payback_years} лет`;
+function triggerRender(firstPositions = []) {
+  // 1. Calculate local metrics synchronously for instant UI updates (prevents drag lag and FLIP animation breakages)
+  const R0 = Calc.calculateThermalResistance(state.layers, state.materialsMap);
+  const weight = Calc.calculateTotalWeight(state.layers, state.reinforcementMass);
+  const co2 = Calc.calculateCarbonFootprint(state.layers, state.reinforcementMass, state.materialsMap);
+  const energy = Calc.calculateEmbodiedEnergy(state.layers, state.reinforcementMass, state.materialsMap);
+  const reqR = Calc.calculateRequiredR(state.hdd);
+  const meetsNorm = R0 >= reqR;
+  const totalCO2 = co2 * (state.wallArea || 0);
+  const payback_years = Calc.calculatePaybackPeriod(state.layers, state.reinforcementMass, state.hdd, state.materialsMap);
+  const paybackText = payback_years > 100 ? "Более 100 лет (избыточно)" : `${payback_years} лет`;
 
-    const q_st_year = 0.024 * state.hdd * 1 / R0;
-    const q_year = q_st_year * (state.wallArea || 0);
-    const v1 = q_st_year / (9.3 * 0.9);
-    const v_total = v1 * (state.wallArea || 0);
+  const q_st_year = 0.024 * state.hdd * 1 / R0;
+  const q_year = q_st_year * (state.wallArea || 0);
+  const v1 = q_st_year / (9.3 * 0.9);
+  const v_total = v1 * (state.wallArea || 0);
 
-    metrics = {
-      R0,
-      weight,
-      co2,
-      energy,
-      reqR,
-      meetsNorm,
-      totalCO2,
-      paybackText,
-      q_st_year,
-      q_year,
-      v1,
-      v_total
-    };
-  }
+  const localMetrics = {
+    R0,
+    weight,
+    co2,
+    energy,
+    reqR,
+    meetsNorm,
+    totalCO2,
+    paybackText,
+    q_st_year,
+    q_year,
+    v1,
+    v_total,
+    score: Calc.calculateEfficiencyScore(state.layers, state.reinforcementMass, state.hdd, state.materialsMap)
+  };
 
-  // Calculate score locally using the latest metrics
-  metrics.score = Calc.calculateEfficiencyScore(state.layers, state.reinforcementMass, state.hdd, state.materialsMap);
+  window._calculatedMetricsForPreview = localMetrics;
 
-  window._calculatedMetricsForPreview = metrics;
-
+  // Render synchronously
   ui.render(state, firstPositions);
 
   if (state.currentStep === 3) {
-    ui.renderStep3WithMetrics(state, metrics);
+    ui.renderStep3WithMetrics(state, localMetrics);
   }
+
+  // 2. Fetch official backend calculation in the background
+  api.calculateWallMetrics(state)
+    .then(backendMetrics => {
+      backendMetrics.score = Calc.calculateEfficiencyScore(state.layers, state.reinforcementMass, state.hdd, state.materialsMap);
+      window._calculatedMetricsForPreview = backendMetrics;
+
+      if (state.currentStep === 3) {
+        ui.renderStep3WithMetrics(state, backendMetrics);
+      }
+    })
+    .catch(err => {
+      console.warn("Background backend calculation failed, using local metrics:", err);
+    });
 }
 
 function openEfficiencyModal() {
@@ -483,6 +491,10 @@ async function initApp() {
     
     window._onRegionSelect = (name, hdd) => {
       state.selectRegion(name, hdd);
+      const menu = document.getElementById('region-dropdown-menu');
+      const chevron = document.getElementById('region-dropdown-chevron');
+      if (menu) menu.classList.remove('dropdown-active');
+      if (chevron) chevron.classList.remove('rotate-180');
       triggerRender();
     };
 
