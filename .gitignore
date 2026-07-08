@@ -1,12 +1,49 @@
-# User specified files to ignore
+# ==============================================================================
+# 1. Проект и ИИ
+# ==============================================================================
+# Repomix output
+repomix-output.xml
+repomix-output.txt
+
+# Личные заметки
 e.md
 readme.md
 eco_backend/readme.md
 
-# Python
-__pycache__/
+# ==============================================================================
+# 2. Окружение и секреты
+# ==============================================================================
+# Secrets and local configs
+.env
+.env.local
+.env.*.local
+*.env
+*.bak
+*.conf
+
+# Python venv
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# 3. Python
+# ==============================================================================
+# Python cache and builds
+**/__pycache__/
 *.py[cod]
 *$py.class
+*.so
+
+# Local DBs
+*.db
+*.sqlite
+*.sqlite3
+
+# Tests and coverage
 .pytest_cache/
 .coverage
 htmlcov/
@@ -19,24 +56,30 @@ coverage.xml
 *.py,cover
 .hypothesis/
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+# ==============================================================================
+# 4. Frontend / Node
+# ==============================================================================
+node_modules/
+/dist
+/build
+.npm
+*.log
 
-# IDEs and editors
+# ==============================================================================
+# 5. Editor / OS
+# ==============================================================================
+# VS Code
 .vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.swp
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
 
-# OS-specific
+# JetBrains
+.idea/
+
+# System files
 .DS_Store
 Thumbs.db
+desktop.ini

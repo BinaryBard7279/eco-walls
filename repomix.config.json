@@ -1,0 +1,28 @@
+{
+  "output": {
+    "filePath": "repomix-output.xml",
+    "style": "xml",
+    "parsable": true,
+    "removeComments": false,
+    "removeEmptyLines": false,
+    "showLineNumbers": true,
+    "topFilesLength": 10
+  },
+  "ignore": {
+    "useGitignore": true,
+    "useDefaultPatterns": true,
+    "customPatterns": [
+      "**/__pycache__",
+      "**/.pytest_cache",
+      "**/*.pyc",
+      "**/*.pyo",
+      "**/*.pyd",
+      "**/CACHEDIR.TAG",
+      "**/.DS_Store",
+      "venv/",
+      ".venv/",
+      "env/",
+      "repomix-output.xml"
+    ]
+  }
+}

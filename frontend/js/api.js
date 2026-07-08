@@ -21,7 +21,13 @@ const CITIES = [
   { name: "Якутск", hdd: 10250 }
 ];
 
-const BACKEND_URL = "http://localhost:8000/api/v1";
+const BACKEND_URL = (
+  window.location.protocol === "file:" || 
+  ((window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") && 
+   window.location.port !== "" && window.location.port !== "80" && window.location.port !== "443")
+)
+  ? "http://localhost:8000/api/v1" 
+  : "/api/v1";
 
 function getMaterialCategory(id, name) {
   const idNum = parseInt(id);

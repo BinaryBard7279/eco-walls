@@ -1,0 +1,21 @@
+www.dev-sandbox.online {
+    redir https://dev-sandbox.online{uri}
+}
+
+dev-sandbox.online {
+    # Serve static frontend files
+    root * /usr/share/caddy
+    file_server
+
+    # Route API calls and auto-generated documentation to the backend container
+    reverse_proxy /api/* app:8000
+    reverse_proxy /docs* app:8000
+    reverse_proxy /openapi.json app:8000
+}
+
+pgadmin.dev-sandbox.online {
+    basicauth {
+        admin $2a$04$B1lIu6YvkDK23uUAV4Zb.u1UIqG/fAdnp4mYyMtpQZQCBu9WLRf1W
+    }
+    reverse_proxy pgadmin:80
+}

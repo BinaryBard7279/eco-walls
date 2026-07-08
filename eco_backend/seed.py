@@ -31,7 +31,9 @@ def seed_database():
     print("Tables created successfully.")
 
     # Load parsed JSON
-    json_path = "C:/Users/Nick/.gemini/antigravity-cli/brain/901fc9c1-a1e8-4082-87a2-05aaa03b04c3/scratch/parsed_materials_heuristic.json"
+    import os
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    json_path = os.path.join(current_dir, "app", "db", "parsed_materials_heuristic.json")
     with open(json_path, "r", encoding="utf-8") as f:
         materials_data = json.load(f)
 

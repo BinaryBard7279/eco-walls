@@ -21,7 +21,8 @@ def seed_db_sync(connection):
         # If count is not 174, clear and seed
         session.query(Material).delete()
         
-        json_path = "C:/Users/Nick/.gemini/antigravity-cli/brain/901fc9c1-a1e8-4082-87a2-05aaa03b04c3/scratch/parsed_materials_heuristic.json"
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(current_dir, "..", "app", "db", "parsed_materials_heuristic.json")
         if not os.path.exists(json_path):
             raise FileNotFoundError(f"Parsed materials JSON not found at {json_path}")
             

@@ -1,0 +1,1394 @@
+[
+  {
+    "id": "1",
+    "name": "Вспененный пенополистирол (EPS)",
+    "density_raw": "30",
+    "conductivity_raw": "0,039",
+    "carbon_raw": "4,1810",
+    "energy_raw": "0,87"
+  },
+  {
+    "id": "2",
+    "name": "Вспененный пенополистирол (EPS)",
+    "density_raw": "15",
+    "conductivity_raw": "0,031",
+    "carbon_raw": "3,257",
+    "energy_raw": "4,31"
+  },
+  {
+    "id": "3",
+    "name": "Плиты из пенополистирола вспененного (EPS)",
+    "density_raw": "30",
+    "conductivity_raw": "0,049",
+    "carbon_raw": "4,26110",
+    "energy_raw": "5,40"
+  },
+  {
+    "id": "4",
+    "name": "Плиты из пенополистирола вспененного (EPS)",
+    "density_raw": "20",
+    "conductivity_raw": "0,051",
+    "carbon_raw": "3,278",
+    "energy_raw": "5,80"
+  },
+  {
+    "id": "5",
+    "name": "Плиты из пенополистирола вспененного (EPS)",
+    "density_raw": "15",
+    "conductivity_raw": "0,053",
+    "carbon_raw": "2,958",
+    "energy_raw": "3,80"
+  },
+  {
+    "id": "6",
+    "name": "Плиты из пенополистирола вспененного (EPS)",
+    "density_raw": "10",
+    "conductivity_raw": "0,057",
+    "carbon_raw": "2,858",
+    "energy_raw": "1,20"
+  },
+  {
+    "id": "7",
+    "name": "Плиты из пенополистирола вспененного (EPS)",
+    "density_raw": "5",
+    "conductivity_raw": "0,072",
+    "carbon_raw": "2,758",
+    "energy_raw": "0,80"
+  },
+  {
+    "id": "8",
+    "name": "Плиты из пенополистирола фасадные",
+    "density_raw": "16",
+    "conductivity_raw": "0,048",
+    "carbon_raw": "4,3610",
+    "energy_raw": "8,40"
+  },
+  {
+    "id": "9",
+    "name": "Экструзионный пенополистирол 4 (XPS)",
+    "density_raw": "30",
+    "conductivity_raw": "0,033",
+    "carbon_raw": "5,529",
+    "energy_raw": "8,60"
+  },
+  {
+    "id": "10",
+    "name": "Экструзионный пенополистирол 5 (XPS)",
+    "density_raw": "40",
+    "conductivity_raw": "0,035",
+    "carbon_raw": "5,219",
+    "energy_raw": "8,11"
+  },
+  {
+    "id": "11",
+    "name": "Плиты из экструзионного пенополистирола",
+    "density_raw": "до 350,033",
+    "conductivity_raw": "6,1110",
+    "carbon_raw": "0,9",
+    "energy_raw": "7"
+  },
+  {
+    "id": "12",
+    "name": "Плиты из экструзионного пенополистирола (XPS)",
+    "density_raw": "35–45",
+    "conductivity_raw": "0,036",
+    "carbon_raw": "5,239",
+    "energy_raw": "8,15"
+  },
+  {
+    "id": "13",
+    "name": "Полиизоцианурат 1 (PIR)",
+    "density_raw": "40",
+    "conductivity_raw": "0,022",
+    "carbon_raw": "6,519",
+    "energy_raw": "9,63"
+  },
+  {
+    "id": "14",
+    "name": "Полиизоцианурат 2 (PIR)",
+    "density_raw": "35",
+    "conductivity_raw": "0,022",
+    "carbon_raw": "5,838",
+    "energy_raw": "1,00"
+  },
+  {
+    "id": "15",
+    "name": "Полиизоцианурат 3 (PIR)",
+    "density_raw": "30",
+    "conductivity_raw": "0,022",
+    "carbon_raw": "3,336",
+    "energy_raw": "3,61"
+  },
+  {
+    "id": "16",
+    "name": "Полиизоцианурат 4 (PIR)",
+    "density_raw": "20",
+    "conductivity_raw": "0,021",
+    "carbon_raw": "2,635",
+    "energy_raw": "8,97"
+  },
+  {
+    "id": "17",
+    "name": "Карбамидно-формальдегидный пенопласт (КФП) (Пеноизол)",
+    "density_raw": "115",
+    "conductivity_raw": "0,037",
+    "carbon_raw": "3,7767",
+    "energy_raw": "5,375"
+  },
+  {
+    "id": "18",
+    "name": "Карбамидно-формальдегидный пенопласт (КФП) (Пеноизол)",
+    "density_raw": "210",
+    "conductivity_raw": "0,035",
+    "carbon_raw": "2,8827",
+    "energy_raw": "2,535"
+  },
+  {
+    "id": "19",
+    "name": "Пенополиуретан PUR",
+    "density_raw": "135",
+    "conductivity_raw": "0,0261",
+    "carbon_raw": "6,626",
+    "energy_raw": "7,4"
+  },
+  {
+    "id": "20",
+    "name": "Пенополиуретан PUR",
+    "density_raw": "130",
+    "conductivity_raw": "0,0251",
+    "carbon_raw": "5,024",
+    "energy_raw": "1,4"
+  },
+  {
+    "id": "21",
+    "name": "Пенополиуретан PUR",
+    "density_raw": "125",
+    "conductivity_raw": "0,0241",
+    "carbon_raw": "5,024",
+    "energy_raw": "1,4"
+  },
+  {
+    "id": "22",
+    "name": "Пенополиуретан PUR",
+    "density_raw": "220",
+    "conductivity_raw": "0,0231",
+    "carbon_raw": "2,921",
+    "energy_raw": "6,6"
+  },
+  {
+    "id": "23",
+    "name": "Пенополиуретан PUR",
+    "density_raw": "315",
+    "conductivity_raw": "0,0221",
+    "carbon_raw": "2,217",
+    "energy_raw": "3,5"
+  },
+  {
+    "id": "24",
+    "name": "Плиты из пенополиуретана",
+    "density_raw": "80",
+    "conductivity_raw": "0,047",
+    "carbon_raw": "3,6812",
+    "energy_raw": "1,5"
+  },
+  {
+    "id": "25",
+    "name": "Плиты из пенополиуретана",
+    "density_raw": "60",
+    "conductivity_raw": "0,040",
+    "carbon_raw": "3,5811",
+    "energy_raw": "1,5"
+  },
+  {
+    "id": "26",
+    "name": "Плиты из пенополиуретана",
+    "density_raw": "40",
+    "conductivity_raw": "0,033",
+    "carbon_raw": "3,4810",
+    "energy_raw": "1,5"
+  },
+  {
+    "id": "27",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "160",
+    "conductivity_raw": "0,047",
+    "carbon_raw": "1,352",
+    "energy_raw": "9,6"
+  },
+  {
+    "id": "28",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "140",
+    "conductivity_raw": "0,046",
+    "carbon_raw": "1,312",
+    "energy_raw": "7,4"
+  },
+  {
+    "id": "29",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "120",
+    "conductivity_raw": "0,046",
+    "carbon_raw": "1,292",
+    "energy_raw": "6,4"
+  },
+  {
+    "id": "30",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "80",
+    "conductivity_raw": "0,045",
+    "carbon_raw": "1,262",
+    "energy_raw": "4,5"
+  },
+  {
+    "id": "31",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "60",
+    "conductivity_raw": "0,044",
+    "carbon_raw": "1,222",
+    "energy_raw": "1,5"
+  },
+  {
+    "id": "32",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "50",
+    "conductivity_raw": "0,043",
+    "carbon_raw": "1,191",
+    "energy_raw": "9,20"
+  },
+  {
+    "id": "33",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "40",
+    "conductivity_raw": "0,037",
+    "carbon_raw": "1,121",
+    "energy_raw": "7,80"
+  },
+  {
+    "id": "34",
+    "name": "Минераловатные изделия из каменного волокна",
+    "density_raw": "35",
+    "conductivity_raw": "0,035",
+    "carbon_raw": "1,051",
+    "energy_raw": "6,80"
+  },
+  {
+    "id": "35",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "80",
+    "conductivity_raw": "0,050",
+    "carbon_raw": "2,555",
+    "energy_raw": "7,5"
+  },
+  {
+    "id": "36",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "70",
+    "conductivity_raw": "0,047",
+    "carbon_raw": "2,355",
+    "energy_raw": "5,5"
+  },
+  {
+    "id": "37",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "60",
+    "conductivity_raw": "0,046",
+    "carbon_raw": "2,155",
+    "energy_raw": "0,5"
+  },
+  {
+    "id": "38",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "50",
+    "conductivity_raw": "0,045",
+    "carbon_raw": "1,954",
+    "energy_raw": "5,5"
+  },
+  {
+    "id": "39",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "40",
+    "conductivity_raw": "0,044",
+    "carbon_raw": "1,904",
+    "energy_raw": "3,5"
+  },
+  {
+    "id": "40",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "30",
+    "conductivity_raw": "0,047",
+    "carbon_raw": "1,754",
+    "energy_raw": "0,5"
+  },
+  {
+    "id": "41",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "20",
+    "conductivity_raw": "0,048",
+    "carbon_raw": "1,553",
+    "energy_raw": "5,5"
+  },
+  {
+    "id": "42",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "15",
+    "conductivity_raw": "0,049",
+    "carbon_raw": "1,453",
+    "energy_raw": "0,5"
+  },
+  {
+    "id": "43",
+    "name": "Минераловатные изделия из стеклянного волокна",
+    "density_raw": "10",
+    "conductivity_raw": "0,050",
+    "carbon_raw": "1,352",
+    "energy_raw": "8,1"
+  },
+  {
+    "id": "44",
+    "name": "Пеностекло",
+    "density_raw": "100",
+    "conductivity_raw": "0,062",
+    "carbon_raw": "9,4115",
+    "energy_raw": "3"
+  },
+  {
+    "id": "45",
+    "name": "Пеностекло",
+    "density_raw": "50",
+    "conductivity_raw": "0,046",
+    "carbon_raw": "4,527",
+    "energy_raw": "5,5"
+  },
+  {
+    "id": "46",
+    "name": "Пеностекло",
+    "density_raw": "30",
+    "conductivity_raw": "0,035",
+    "carbon_raw": "1,32",
+    "energy_raw": "8,8"
+  },
+  {
+    "id": "47",
+    "name": "Плиты древесно-волокнистые и древесно-стружечные",
+    "density_raw": "1000",
+    "conductivity_raw": "0,29",
+    "carbon_raw": "0,721",
+    "energy_raw": "1,1"
+  },
+  {
+    "id": "48",
+    "name": "Плиты древесно-волокнистые и древесно-стружечные",
+    "density_raw": "800",
+    "conductivity_raw": "0,23",
+    "carbon_raw": "0,621",
+    "energy_raw": "0,9"
+  },
+  {
+    "id": "49",
+    "name": "Плиты древесно-волокнистые и древесно-стружечные",
+    "density_raw": "600",
+    "conductivity_raw": "0,16",
+    "carbon_raw": "0,541",
+    "energy_raw": "0,6"
+  },
+  {
+    "id": "50",
+    "name": "Плиты древесно-волокнистые и древесно-стружечные",
+    "density_raw": "400",
+    "conductivity_raw": "0,13",
+    "carbon_raw": "0,25",
+    "energy_raw": "9,7"
+  },
+  {
+    "id": "51",
+    "name": "Плиты древесно-волокнистые и древесно-стружечные",
+    "density_raw": "200",
+    "conductivity_raw": "0,08",
+    "carbon_raw": "0,13",
+    "energy_raw": "9,4"
+  },
+  {
+    "id": "52",
+    "name": "Древесная вата",
+    "density_raw": "180",
+    "conductivity_raw": "0,070",
+    "carbon_raw": "0,122",
+    "energy_raw": "0,27"
+  },
+  {
+    "id": "53",
+    "name": "Древесная вата",
+    "density_raw": "60",
+    "conductivity_raw": "0,038",
+    "carbon_raw": "0,982",
+    "energy_raw": "0,00"
+  },
+  {
+    "id": "54",
+    "name": "Бумажная вата",
+    "density_raw": "40",
+    "conductivity_raw": "0,037",
+    "carbon_raw": "0,632",
+    "energy_raw": "0,20"
+  },
+  {
+    "id": "55",
+    "name": "Целлюлозное волокно",
+    "density_raw": "50",
+    "conductivity_raw": "0,040",
+    "carbon_raw": "1,831",
+    "energy_raw": "0,49"
+  },
+  {
+    "id": "56",
+    "name": "Целлюлозная изоляция, эковата",
+    "density_raw": "60",
+    "conductivity_raw": "0,049",
+    "carbon_raw": "0,75",
+    "energy_raw": "3,3"
+  },
+  {
+    "id": "57",
+    "name": "Целлюлозная изоляция, эковата",
+    "density_raw": "50",
+    "conductivity_raw": "0,045",
+    "carbon_raw": "0,446",
+    "energy_raw": "2,12"
+  },
+  {
+    "id": "58",
+    "name": "Целлюлозная изоляция, эковата",
+    "density_raw": "40",
+    "conductivity_raw": "0,040",
+    "carbon_raw": "0,142",
+    "energy_raw": "0,94"
+  },
+  {
+    "id": "59",
+    "name": "Овечья шерсть",
+    "density_raw": "40",
+    "conductivity_raw": "0,035",
+    "carbon_raw": "0,992",
+    "energy_raw": "3,20"
+  },
+  {
+    "id": "60",
+    "name": "Овечья шерсть",
+    "density_raw": "130",
+    "conductivity_raw": "0,033",
+    "carbon_raw": "0,821",
+    "energy_raw": "4,70"
+  },
+  {
+    "id": "61",
+    "name": "Тюк соломы",
+    "density_raw": "100",
+    "conductivity_raw": "0,067",
+    "carbon_raw": "0,06",
+    "energy_raw": "0,240"
+  },
+  {
+    "id": "62",
+    "name": "Плиты гипсовые пазогребневые",
+    "density_raw": "1350",
+    "conductivity_raw": "0,56",
+    "carbon_raw": "0,130",
+    "energy_raw": "1,90"
+  },
+  {
+    "id": "63",
+    "name": "Плиты гипсовые пазогребневые",
+    "density_raw": "1100",
+    "conductivity_raw": "0,41",
+    "carbon_raw": "0,125",
+    "energy_raw": "1,85"
+  },
+  {
+    "id": "64",
+    "name": "Гипсокартонные листы",
+    "density_raw": "1050",
+    "conductivity_raw": "0,36",
+    "carbon_raw": "0,42",
+    "energy_raw": "6,95"
+  },
+  {
+    "id": "65",
+    "name": "Гипсокартонные листы",
+    "density_raw": "800",
+    "conductivity_raw": "0,21",
+    "carbon_raw": "0,38",
+    "energy_raw": "6,75"
+  },
+  {
+    "id": "66",
+    "name": "Перлит",
+    "density_raw": "166",
+    "conductivity_raw": "0,055",
+    "carbon_raw": "0,493",
+    "energy_raw": "9,35"
+  },
+  {
+    "id": "67",
+    "name": "Изделия из вспученного перлита на битумном связующем (36)",
+    "density_raw": "300",
+    "conductivity_raw": "0,099",
+    "carbon_raw": "0,521",
+    "energy_raw": "0,1"
+  },
+  {
+    "id": "68",
+    "name": "Изделия из вспученного перлита на битумном связующем (37)",
+    "density_raw": "250",
+    "conductivity_raw": "0,099",
+    "carbon_raw": "0,49",
+    "energy_raw": "9,8"
+  },
+  {
+    "id": "69",
+    "name": "Изделия из вспученного перлита на битумном связующем (38)",
+    "density_raw": "225",
+    "conductivity_raw": "0,094",
+    "carbon_raw": "0,454",
+    "energy_raw": "9,7"
+  },
+  {
+    "id": "70",
+    "name": "Изделия из вспученного перлита на битумном связующем (39)",
+    "density_raw": "200",
+    "conductivity_raw": "0,090",
+    "carbon_raw": "0,41",
+    "energy_raw": "9.5"
+  },
+  {
+    "id": "71",
+    "name": "Пенополиэтилен несшитый",
+    "density_raw": "20",
+    "conductivity_raw": "0,042",
+    "carbon_raw": "3,709",
+    "energy_raw": "2,3"
+  },
+  {
+    "id": "72",
+    "name": "Пенополиэтилен несшитый",
+    "density_raw": "25",
+    "conductivity_raw": "0,042",
+    "carbon_raw": "3,769",
+    "energy_raw": "5,3"
+  },
+  {
+    "id": "73",
+    "name": "Пробковая плита",
+    "density_raw": "150",
+    "conductivity_raw": "0,049",
+    "carbon_raw": "0,815",
+    "energy_raw": "1,52"
+  },
+  {
+    "id": "74",
+    "name": "Пробка",
+    "density_raw": "80",
+    "conductivity_raw": "0,040",
+    "carbon_raw": "0,19",
+    "energy_raw": "4,00"
+  },
+  {
+    "id": "75",
+    "name": "Лен",
+    "density_raw": "40",
+    "conductivity_raw": "0,042",
+    "carbon_raw": "1,703",
+    "energy_raw": "9,50"
+  },
+  {
+    "id": "76",
+    "name": "Конопля",
+    "density_raw": "40",
+    "conductivity_raw": "0,038",
+    "carbon_raw": "-0,353",
+    "energy_raw": "7,50"
+  },
+  {
+    "id": "77",
+    "name": "Натуральный утеплитель из конопли Кенаф",
+    "density_raw": "40",
+    "conductivity_raw": "0,038",
+    "carbon_raw": "3,175",
+    "energy_raw": "9,37"
+  },
+  {
+    "id": "78",
+    "name": "Хлопок",
+    "density_raw": "30",
+    "conductivity_raw": "0,039",
+    "carbon_raw": "-1,204",
+    "energy_raw": "8,00"
+  },
+  {
+    "id": "79",
+    "name": "Текстильное волокно",
+    "density_raw": "20",
+    "conductivity_raw": "0,044",
+    "carbon_raw": "1,101",
+    "energy_raw": "5,00"
+  },
+  {
+    "id": "80",
+    "name": "Полиэтилентерефталат PET",
+    "density_raw": "30",
+    "conductivity_raw": "0,035",
+    "carbon_raw": "1,7838",
+    "energy_raw": "3,72"
+  },
+  {
+    "id": "81",
+    "name": "Аэрогель",
+    "density_raw": "15",
+    "conductivity_raw": "0,0151",
+    "carbon_raw": "8,7037",
+    "energy_raw": "2,00"
+  },
+  {
+    "id": "82",
+    "name": "ВИП-панели (вакуумные изоляционные панели (VIP-панели))",
+    "density_raw": "180",
+    "conductivity_raw": "0,00254",
+    "carbon_raw": "2,00101",
+    "energy_raw": "6"
+  },
+  {
+    "id": "83",
+    "name": "Вермикулит",
+    "density_raw": "172",
+    "conductivity_raw": "0,0621",
+    "carbon_raw": "0,4514",
+    "energy_raw": "8,98"
+  },
+  {
+    "id": "84",
+    "name": "Гравий керамзитовый",
+    "density_raw": "600",
+    "conductivity_raw": "0,19",
+    "carbon_raw": "0,120",
+    "energy_raw": "1,80"
+  },
+  {
+    "id": "85",
+    "name": "Гравий керамзитовый",
+    "density_raw": "500",
+    "conductivity_raw": "0,175",
+    "carbon_raw": "0,115",
+    "energy_raw": "1,75"
+  },
+  {
+    "id": "86",
+    "name": "Гравий керамзитовый",
+    "density_raw": "450",
+    "conductivity_raw": "0,16",
+    "carbon_raw": "0,110",
+    "energy_raw": "1,70"
+  },
+  {
+    "id": "87",
+    "name": "Гравий керамзитовый",
+    "density_raw": "400",
+    "conductivity_raw": "0,15",
+    "carbon_raw": "0,105",
+    "energy_raw": "1,65"
+  },
+  {
+    "id": "88",
+    "name": "Щебень и песок из перлита вспученного",
+    "density_raw": "500",
+    "conductivity_raw": "0,11",
+    "carbon_raw": "0,415",
+    "energy_raw": "1,55"
+  },
+  {
+    "id": "89",
+    "name": "Щебень и песок из перлита вспученного",
+    "density_raw": "400",
+    "conductivity_raw": "0,095",
+    "carbon_raw": "0,401",
+    "energy_raw": "1,54"
+  },
+  {
+    "id": "90",
+    "name": "Щебень и песок из перлита вспученного",
+    "density_raw": "350",
+    "conductivity_raw": "0,085",
+    "carbon_raw": "0,395",
+    "energy_raw": "1,53"
+  },
+  {
+    "id": "91",
+    "name": "Щебень и песок из перлита вспученного",
+    "density_raw": "300",
+    "conductivity_raw": "0,08",
+    "carbon_raw": "0,390",
+    "energy_raw": "1,52"
+  },
+  {
+    "id": "92",
+    "name": "Песок для строительных работ",
+    "density_raw": "1600",
+    "conductivity_raw": "0,58",
+    "carbon_raw": "0,01",
+    "energy_raw": "0,05"
+  },
+  {
+    "id": "93",
+    "name": "Железобетон сборный",
+    "density_raw": "2500",
+    "conductivity_raw": "2,04",
+    "carbon_raw": "0,543",
+    "energy_raw": "2,00"
+  },
+  {
+    "id": "94",
+    "name": "Бетон на гравии или щебне из природного камня, М",
+    "density_raw": "2002400",
+    "conductivity_raw": "1,86",
+    "carbon_raw": "0,106",
+    "energy_raw": "0,731"
+  },
+  {
+    "id": "95",
+    "name": "Бетон на гравии или щебне из природного камня, М",
+    "density_raw": "3002400",
+    "conductivity_raw": "1,86",
+    "carbon_raw": "0,139",
+    "energy_raw": "0,862"
+  },
+  {
+    "id": "96",
+    "name": "Бетон на гравии или щебне из природного камня, М",
+    "density_raw": "3002500",
+    "conductivity_raw": "1,88",
+    "carbon_raw": "0,173",
+    "energy_raw": "0,871"
+  },
+  {
+    "id": "97",
+    "name": "Бетон прочностью 16-20 МПа",
+    "density_raw": "2300",
+    "conductivity_raw": "1,85",
+    "carbon_raw": "0,100",
+    "energy_raw": "0,7"
+  },
+  {
+    "id": "98",
+    "name": "Бетон прочностью 20-25 МПа",
+    "density_raw": "2350",
+    "conductivity_raw": "1,86",
+    "carbon_raw": "0,107",
+    "energy_raw": "0,74"
+  },
+  {
+    "id": "99",
+    "name": "Бетон прочностью 25-30 МПа",
+    "density_raw": "2450",
+    "conductivity_raw": "1,87",
+    "carbon_raw": "0,113",
+    "energy_raw": "0,78"
+  },
+  {
+    "id": "100",
+    "name": "Бетон прочностью 30-35 МПа",
+    "density_raw": "2450",
+    "conductivity_raw": "1,87",
+    "carbon_raw": "0,120",
+    "energy_raw": "0,82"
+  },
+  {
+    "id": "101",
+    "name": "Бетон прочностью 35-40 МПа",
+    "density_raw": "2500",
+    "conductivity_raw": "1,88",
+    "carbon_raw": "0,132",
+    "energy_raw": "0,88"
+  },
+  {
+    "id": "102",
+    "name": "Бетон прочностью 40-50 МПа",
+    "density_raw": "2500",
+    "conductivity_raw": "1,88",
+    "carbon_raw": "0,151",
+    "energy_raw": "1,00"
+  },
+  {
+    "id": "103",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "1800",
+    "conductivity_raw": "0,92",
+    "carbon_raw": "0,445",
+    "energy_raw": "1,75"
+  },
+  {
+    "id": "104",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "1600",
+    "conductivity_raw": "0,79",
+    "carbon_raw": "0,435",
+    "energy_raw": "1,70"
+  },
+  {
+    "id": "105",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "1400",
+    "conductivity_raw": "0,65",
+    "carbon_raw": "0,425",
+    "energy_raw": "1,65"
+  },
+  {
+    "id": "106",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "1200",
+    "conductivity_raw": "0,52",
+    "carbon_raw": "0,415",
+    "energy_raw": "1,60"
+  },
+  {
+    "id": "107",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "1000",
+    "conductivity_raw": "0,41",
+    "carbon_raw": "0,405",
+    "energy_raw": "1,55"
+  },
+  {
+    "id": "108",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "800",
+    "conductivity_raw": "0,31",
+    "carbon_raw": "0,395",
+    "energy_raw": "1,50"
+  },
+  {
+    "id": "109",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "600",
+    "conductivity_raw": "0,26",
+    "carbon_raw": "0,385",
+    "energy_raw": "1,45"
+  },
+  {
+    "id": "110",
+    "name": "Керамзитобетон на керамзитовом песке",
+    "density_raw": "500",
+    "conductivity_raw": "0,23",
+    "carbon_raw": "0,375",
+    "energy_raw": "1,40"
+  },
+  {
+    "id": "111",
+    "name": "Керамзитобетон на кварцевом песке с умеренной (до $V_в = 12\\,\\%$) поризацией",
+    "density_raw": "1200",
+    "conductivity_raw": "0,58",
+    "carbon_raw": "0,45",
+    "energy_raw": "1,53"
+  },
+  {
+    "id": "112",
+    "name": "Керамзитобетон на кварцевом песке с умеренной поризацией",
+    "density_raw": "1000",
+    "conductivity_raw": "0,47",
+    "carbon_raw": "0,41",
+    "energy_raw": "1,47"
+  },
+  {
+    "id": "113",
+    "name": "Керамзитобетон на кварцевом песке с умеренной поризацией",
+    "density_raw": "800",
+    "conductivity_raw": "0,35",
+    "carbon_raw": "0,393",
+    "energy_raw": "1,45"
+  },
+  {
+    "id": "114",
+    "name": "Керамзитобетон беспесчаный",
+    "density_raw": "400",
+    "conductivity_raw": "0,125",
+    "carbon_raw": "0,373",
+    "energy_raw": "1,39"
+  },
+  {
+    "id": "115",
+    "name": "Полистиролбетон на портландцементе",
+    "density_raw": "600",
+    "conductivity_raw": "0,20",
+    "carbon_raw": "0,801",
+    "energy_raw": "8,35"
+  },
+  {
+    "id": "116",
+    "name": "Полистиролбетон на портландцементе",
+    "density_raw": "500",
+    "conductivity_raw": "0,16",
+    "carbon_raw": "0,825",
+    "energy_raw": "8,57"
+  },
+  {
+    "id": "117",
+    "name": "Полистиролбетон на портландцементе",
+    "density_raw": "400",
+    "conductivity_raw": "0,135",
+    "carbon_raw": "0,841",
+    "energy_raw": "9,05"
+  },
+  {
+    "id": "118",
+    "name": "Пенобетон естественного твердения на цементном вяжущем (без песка)",
+    "density_raw": "400",
+    "conductivity_raw": "0,15",
+    "carbon_raw": "0,292",
+    "energy_raw": "0,63"
+  },
+  {
+    "id": "119",
+    "name": "Пенобетон естественного твердения на цементном вяжущем (с песком)",
+    "density_raw": "1000",
+    "conductivity_raw": "0,43",
+    "carbon_raw": "0,333",
+    "energy_raw": "0,75"
+  },
+  {
+    "id": "120",
+    "name": "Пенобетон естественного твердения на цементном вяжущем (с песком)",
+    "density_raw": "800",
+    "conductivity_raw": "0,37",
+    "carbon_raw": "0,325",
+    "energy_raw": "0,71"
+  },
+  {
+    "id": "121",
+    "name": "Пенобетон естественного твердения на цементном вяжущем (с песком)",
+    "density_raw": "600",
+    "conductivity_raw": "0,26",
+    "carbon_raw": "0,315",
+    "energy_raw": "0,67"
+  },
+  {
+    "id": "122",
+    "name": "Бетонный блок средней плотности",
+    "density_raw": "1450",
+    "conductivity_raw": "0,68",
+    "carbon_raw": "0,185",
+    "energy_raw": "0,67"
+  },
+  {
+    "id": "123",
+    "name": "Кладка стен из газосиликатных блоков на клеевом растворе c толщиной швов 2-3 мм",
+    "density_raw": "800",
+    "conductivity_raw": "0,27",
+    "carbon_raw": "0,135",
+    "energy_raw": "1,9"
+  },
+  {
+    "id": "124",
+    "name": "Кладка стен из газосиликатных блоков на клеевом растворе c толщиной швов 2-3 мм",
+    "density_raw": "600",
+    "conductivity_raw": "0,19",
+    "carbon_raw": "0,125",
+    "energy_raw": "1,8"
+  },
+  {
+    "id": "125",
+    "name": "Кладка стен из газосиликатных блоков на клеевом растворе c толщиной швов 2-3 мм",
+    "density_raw": "400",
+    "conductivity_raw": "0,15",
+    "carbon_raw": "0,115",
+    "energy_raw": "1,7"
+  },
+  {
+    "id": "126",
+    "name": "Кладка стен из газосиликатных блоков на клеевом растворе c толщиной швов 2-3 мм",
+    "density_raw": "300",
+    "conductivity_raw": "0,14",
+    "carbon_raw": "0,102",
+    "energy_raw": "1,6"
+  },
+  {
+    "id": "127",
+    "name": "Кладка стен из мелких автоклавных ячеистобетонных блоков на цементно-песчаном растворе",
+    "density_raw": "1000",
+    "conductivity_raw": "0,37",
+    "carbon_raw": "0,41",
+    "energy_raw": "3,75"
+  },
+  {
+    "id": "128",
+    "name": "Кладка стен из мелких автоклавных ячеистобетонных блоков на цементно-песчаном растворе",
+    "density_raw": "900",
+    "conductivity_raw": "0,29",
+    "carbon_raw": "0,38",
+    "energy_raw": "3,65"
+  },
+  {
+    "id": "129",
+    "name": "Кладка стен из мелких автоклавных ячеистобетонных блоков на цементно-песчаном растворе",
+    "density_raw": "800",
+    "conductivity_raw": "0,27",
+    "carbon_raw": "0,36",
+    "energy_raw": "3,60"
+  },
+  {
+    "id": "130",
+    "name": "Кладка стен из мелких автоклавных ячеистобетонных блоков на цементно-песчаном растворе",
+    "density_raw": "700",
+    "conductivity_raw": "0,26",
+    "carbon_raw": "0,35",
+    "energy_raw": "3,55"
+  },
+  {
+    "id": "131",
+    "name": "Автоклавные газобетонные блоки на основе цемента",
+    "density_raw": "750",
+    "conductivity_raw": "0,25",
+    "carbon_raw": "0,30",
+    "energy_raw": "3,50"
+  },
+  {
+    "id": "132",
+    "name": "Автоклавные газосиликатные блоки",
+    "density_raw": "400",
+    "conductivity_raw": "0,15",
+    "carbon_raw": "0,102",
+    "energy_raw": "1,6"
+  },
+  {
+    "id": "133",
+    "name": "Автоклавные газобетонные блоки, армированные волокном",
+    "density_raw": "500",
+    "conductivity_raw": "0,16",
+    "carbon_raw": "0,664",
+    "energy_raw": "7,5"
+  },
+  {
+    "id": "133*",
+    "name": "Керамические блоки",
+    "density_raw": "1600",
+    "conductivity_raw": "0,63",
+    "carbon_raw": "0,40",
+    "energy_raw": "3,37"
+  },
+  {
+    "id": "134",
+    "name": "Керамические блоки",
+    "density_raw": "800",
+    "conductivity_raw": "0,18",
+    "carbon_raw": "0,22",
+    "energy_raw": "2,96"
+  },
+  {
+    "id": "135",
+    "name": "Раствор цементно-песчаный",
+    "density_raw": "1800",
+    "conductivity_raw": "0,93",
+    "carbon_raw": "0,19",
+    "energy_raw": "1,4"
+  },
+  {
+    "id": "136",
+    "name": "Раствор сложный (песок, известь, цемент)",
+    "density_raw": "1700",
+    "conductivity_raw": "0,87",
+    "carbon_raw": "0,053",
+    "energy_raw": "1,37"
+  },
+  {
+    "id": "137",
+    "name": "Раствор известково-песчаный",
+    "density_raw": "1600",
+    "conductivity_raw": "0,81",
+    "carbon_raw": "0,039",
+    "energy_raw": "1,09"
+  },
+  {
+    "id": "138",
+    "name": "Штукатурка цементно-песчаная",
+    "density_raw": "1800",
+    "conductivity_raw": "0,93",
+    "carbon_raw": "0,19",
+    "energy_raw": "1,4"
+  },
+  {
+    "id": "139",
+    "name": "Штукатурка гипсовая",
+    "density_raw": "1100",
+    "conductivity_raw": "0,27",
+    "carbon_raw": "0,12",
+    "energy_raw": "1,81"
+  },
+  {
+    "id": "140",
+    "name": "Штукатурка гипсовая",
+    "density_raw": "1000",
+    "conductivity_raw": "0,25",
+    "carbon_raw": "0,11",
+    "energy_raw": "1,76"
+  },
+  {
+    "id": "141",
+    "name": "Кладка из глиняного обыкновенного кирпича на цементно-песчаном растворе",
+    "density_raw": "1900",
+    "conductivity_raw": "0,85",
+    "carbon_raw": "0,151",
+    "energy_raw": "2,137"
+  },
+  {
+    "id": "142",
+    "name": "Кладка из глиняного обыкновенного кирпича на цементно-песчаном растворе",
+    "density_raw": "1800",
+    "conductivity_raw": "0,81",
+    "carbon_raw": "0,159",
+    "energy_raw": "2,256"
+  },
+  {
+    "id": "143",
+    "name": "Кладка из глиняного обыкновенного на цементно-шлаковом растворе",
+    "density_raw": "1700",
+    "conductivity_raw": "0,76",
+    "carbon_raw": "0,168",
+    "energy_raw": "2,388"
+  },
+  {
+    "id": "144",
+    "name": "Кладка из керамического пустотного кирпича на цементно-песчаном растворе",
+    "density_raw": "1600",
+    "conductivity_raw": "0,64",
+    "carbon_raw": "0,35",
+    "energy_raw": "3,25"
+  },
+  {
+    "id": "145",
+    "name": "Кладка из керамического пустотного кирпича на цементно-песчаном растворе",
+    "density_raw": "1400",
+    "conductivity_raw": "0,58",
+    "carbon_raw": "0,28",
+    "energy_raw": "3,15"
+  },
+  {
+    "id": "146",
+    "name": "Кладка из керамического пустотного кирпича на цементно-песчаном растворе",
+    "density_raw": "1200",
+    "conductivity_raw": "0,52",
+    "carbon_raw": "0,21",
+    "energy_raw": "2,828"
+  },
+  {
+    "id": "147",
+    "name": "Кладка из силикатного кирпича на цементно-песчаном растворе",
+    "density_raw": "1800",
+    "conductivity_raw": "1,05",
+    "carbon_raw": "0,138",
+    "energy_raw": "1,565"
+  },
+  {
+    "id": "148",
+    "name": "Кладка из силикатного кирпича на цементно-песчаном растворе",
+    "density_raw": "1960",
+    "conductivity_raw": "1,48",
+    "carbon_raw": "0,144",
+    "energy_raw": "1,585"
+  },
+  {
+    "id": "149",
+    "name": "Кладка из силикатного кирпича пустотного на цементно-песчаном растворе",
+    "density_raw": "1500",
+    "conductivity_raw": "0,81",
+    "carbon_raw": "0,134",
+    "energy_raw": "1,521"
+  },
+  {
+    "id": "150",
+    "name": "Кладка из силикатного четырнадцати-пустотного на цементно-песчаном растворе",
+    "density_raw": "1400",
+    "conductivity_raw": "0,76",
+    "carbon_raw": "0,130",
+    "energy_raw": "1,510"
+  },
+  {
+    "id": "151",
+    "name": "Пиломатериалы лиственных пород, высушенные в печи",
+    "density_raw": "600-700",
+    "conductivity_raw": "0,14",
+    "carbon_raw": "0,108",
+    "energy_raw": "2,0"
+  },
+  {
+    "id": "152",
+    "name": "Пиломатериалы сосна и ель поперек волокон",
+    "density_raw": "500",
+    "conductivity_raw": "0,18",
+    "carbon_raw": "0,110",
+    "energy_raw": "2,1"
+  },
+  {
+    "id": "153",
+    "name": "Пиломатериалы дуб поперек волокон",
+    "density_raw": "700",
+    "conductivity_raw": "0,23",
+    "carbon_raw": "0,125",
+    "energy_raw": "2,3"
+  },
+  {
+    "id": "154",
+    "name": "Фанера клееная",
+    "density_raw": "600",
+    "conductivity_raw": "0,18",
+    "carbon_raw": "1,071",
+    "energy_raw": "5,0"
+  },
+  {
+    "id": "155",
+    "name": "Клееный брус",
+    "density_raw": "400-700",
+    "conductivity_raw": "0,18",
+    "carbon_raw": "0,871",
+    "energy_raw": "2,0"
+  },
+  {
+    "id": "156",
+    "name": "Клееный брус (LVL)",
+    "density_raw": "500-700",
+    "conductivity_raw": "0,1",
+    "carbon_raw": "2,283",
+    "energy_raw": "4,3"
+  },
+  {
+    "id": "157",
+    "name": "Облицовка керамической плиткой",
+    "density_raw": "2000",
+    "conductivity_raw": "1,4",
+    "carbon_raw": "1,41",
+    "energy_raw": "5,4"
+  },
+  {
+    "id": "158",
+    "name": "Обои ($150\\text{ г}$ на $1\\text{ м}^2$)",
+    "density_raw": "450",
+    "conductivity_raw": "0,045",
+    "carbon_raw": "1,933",
+    "energy_raw": "6,4"
+  },
+  {
+    "id": "159",
+    "name": "Сталь стержневая арматурная",
+    "density_raw": "785058",
+    "conductivity_raw": "2,4",
+    "carbon_raw": "2",
+    "energy_raw": "4,2"
+  },
+  {
+    "id": "160",
+    "name": "Сварная сетка",
+    "density_raw": "785058",
+    "conductivity_raw": "2,10",
+    "carbon_raw": "2",
+    "energy_raw": "3,8"
+  },
+  {
+    "id": "161",
+    "name": "Оцинкованные изделия",
+    "density_raw": "785058",
+    "conductivity_raw": "2,28",
+    "carbon_raw": "2",
+    "energy_raw": "9,1"
+  },
+  {
+    "id": "162",
+    "name": "Нержавеющая сталь",
+    "density_raw": "785016",
+    "conductivity_raw": "6,15",
+    "carbon_raw": "5",
+    "energy_raw": "6,7"
+  },
+  {
+    "id": "163",
+    "name": "Проволока стальная",
+    "density_raw": "785058",
+    "conductivity_raw": "2,32",
+    "carbon_raw": "3",
+    "energy_raw": "6,0"
+  },
+  {
+    "id": "164",
+    "name": "Алюминий",
+    "density_raw": "2600221",
+    "conductivity_raw": "3,61",
+    "carbon_raw": "5",
+    "energy_raw": "2,9"
+  },
+  {
+    "id": "167",
+    "name": "Медь (в среднем, включая переработку $37\\,\\%$)",
+    "density_raw": "8500407",
+    "conductivity_raw": "2,6",
+    "carbon_raw": "4",
+    "energy_raw": "2"
+  },
+  {
+    "id": "168",
+    "name": "Стекло оконное",
+    "density_raw": "2500",
+    "conductivity_raw": "0,76",
+    "carbon_raw": "1,41",
+    "energy_raw": "6,0"
+  },
+  {
+    "id": "169",
+    "name": "Углепластиковая арматура",
+    "density_raw": "1800",
+    "conductivity_raw": "0,351",
+    "carbon_raw": "9,730",
+    "energy_raw": "1"
+  },
+  {
+    "id": "170",
+    "name": "Углепластиковый текстиль",
+    "density_raw": "1750",
+    "conductivity_raw": "0,251",
+    "carbon_raw": "8,428",
+    "energy_raw": "1"
+  },
+  {
+    "id": "171",
+    "name": "Базальтопластиковая арматура",
+    "density_raw": "2200",
+    "conductivity_raw": "0,4",
+    "carbon_raw": "2,345",
+    "energy_raw": "1,12"
+  },
+  {
+    "id": "172",
+    "name": "Краска на основе растворителя",
+    "density_raw": "--",
+    "conductivity_raw": "3,13",
+    "carbon_raw": "9",
+    "energy_raw": "7"
+  },
+  {
+    "id": "173",
+    "name": "Акриловая краска (на водной основе)",
+    "density_raw": "--",
+    "conductivity_raw": "2,12",
+    "carbon_raw": "5",
+    "energy_raw": "9"
+  },
+  {
+    "id": "174",
+    "name": "Портландцемент",
+    "density_raw": "3100",
+    "conductivity_raw": "-0,86",
+    "carbon_raw": "5",
+    "energy_raw": "5,6"
+  },
+  {
+    "id": "175",
+    "name": "ПВХ",
+    "density_raw": "1380",
+    "conductivity_raw": "-2,41",
+    "carbon_raw": "7",
+    "energy_raw": "7,2"
+  }
+]
