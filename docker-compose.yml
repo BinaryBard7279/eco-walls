@@ -1,8 +1,6 @@
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: binarybard7279/eco-walls:latest
     restart: always
     expose:
       - "8000"
