@@ -44,13 +44,18 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            # Clone repo if it doesn't exist, otherwise update config files
-            if [ ! -d "/root/eco-walls" ]; then
-              git clone https://github.com/BinaryBard7279/eco-walls.git /root/eco-walls
+            # Initialize repository in-place if .git is missing (safely handles existing .env)
+            if [ ! -d "/root/eco-walls/.git" ]; then
+              git init /root/eco-walls
+              cd /root/eco-walls
+              git remote add origin https://github.com/BinaryBard7279/eco-walls.git
+              git fetch
+              git checkout -f main
+            else
+              cd /root/eco-walls
+              git reset --hard HEAD
+              git pull origin main
             fi
-            cd /root/eco-walls
-            git reset --hard HEAD
-            git pull origin main
             
             # Pull the new image from Docker Hub and restart
             docker compose pull
