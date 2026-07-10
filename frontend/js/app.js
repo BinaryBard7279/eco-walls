@@ -277,6 +277,39 @@ function initEvents() {
       const stepId = logoLink ? 1 : Number(stepBtn.getAttribute('data-step'));
       state.setStep(stepId);
       triggerRender();
+      
+      // Закрываем мобильное меню при навигации
+      const sidebar = document.getElementById('mobile-sidebar');
+      const content = document.getElementById('mobile-sidebar-content');
+      if (sidebar && content) {
+        sidebar.classList.add('pointer-events-none', 'opacity-0');
+        sidebar.classList.remove('opacity-100');
+        content.classList.add('-translate-x-full');
+      }
+      return;
+    }
+
+    // Открытие мобильного меню
+    if (target.closest('#mobile-menu-toggle')) {
+      const sidebar = document.getElementById('mobile-sidebar');
+      const content = document.getElementById('mobile-sidebar-content');
+      if (sidebar && content) {
+        sidebar.classList.remove('pointer-events-none', 'opacity-0');
+        sidebar.classList.add('opacity-100');
+        content.classList.remove('-translate-x-full');
+      }
+      return;
+    }
+
+    // Закрытие мобильного меню
+    if (target.closest('#mobile-sidebar-close') || target.closest('#mobile-sidebar-backdrop')) {
+      const sidebar = document.getElementById('mobile-sidebar');
+      const content = document.getElementById('mobile-sidebar-content');
+      if (sidebar && content) {
+        sidebar.classList.add('pointer-events-none', 'opacity-0');
+        sidebar.classList.remove('opacity-100');
+        content.classList.add('-translate-x-full');
+      }
       return;
     }
 

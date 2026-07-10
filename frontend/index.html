@@ -40,7 +40,7 @@
 </head>
 <body class="bg-background text-foreground antialiased min-h-screen flex cad-grid">
 
-  <aside class="w-72 border-r border-border/60 flex flex-col shrink-0 sticky top-0 h-screen bg-background/60 backdrop-blur">
+  <aside class="hidden lg:flex w-72 border-r border-border/60 flex-col shrink-0 sticky top-0 h-screen bg-background/60 backdrop-blur">
     <div class="p-8 pb-10">
       <a href="#" id="logo-link" class="flex items-center gap-2.5 mb-12 group">
         <div class="w-7 h-7 bg-accent-strong rounded-sm flex items-center justify-center">
@@ -65,16 +65,22 @@
   </aside>
 
   <main class="flex-1 flex flex-col min-w-0">
-    <header class="h-20 border-b border-border/60 flex items-center justify-between px-12 sticky top-0 bg-background/80 backdrop-blur z-10">
+    <header class="h-16 md:h-20 border-b border-border/60 flex items-center justify-between px-4 sm:px-6 md:px-12 sticky top-0 bg-background/80 backdrop-blur z-10">
       <div class="flex items-center gap-3">
-        <span class="font-mono text-[10px] tracking-widest uppercase text-muted-foreground" id="header-step-counter">Шаг 01 / 03</span>
+        <!-- Hamburger Menu Toggle Button (Visible only on mobile) -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 -ml-1 hover:bg-panel rounded-md text-muted-foreground hover:text-foreground focus:outline-none transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <span class="font-mono text-[10px] tracking-widest uppercase text-muted-foreground shrink-0" id="header-step-counter">Шаг 01 / 03</span>
         <span class="h-4 w-px bg-border"></span>
-        <h1 class="text-lg font-medium tracking-tight" id="header-title">Параметры проекта</h1>
+        <h1 class="text-sm sm:text-base md:text-lg font-medium tracking-tight truncate" id="header-title">Параметры проекта</h1>
       </div>
       <div id="header-extra" class="font-mono text-xs text-muted-foreground"></div>
     </header>
 
-    <section id="step-1" class="max-w-6xl mx-auto px-12 py-16 w-full">
+    <section id="step-1" class="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 py-8 md:py-16 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-16">
         <div class="space-y-14">
           <div class="max-w-xl">
@@ -219,9 +225,9 @@
       </div>
     </section>
 
-    <section id="step-2" class="max-w-[94rem] mx-auto px-6 py-12 w-full hidden">
-      <div class="grid grid-cols-1 xl:grid-cols-[3fr_1.1fr] gap-10">
-        <div class="space-y-8">
+    <section id="step-2" class="max-w-[94rem] mx-auto px-4 sm:px-6 md:px-12 py-6 md:py-12 w-full hidden">
+      <div class="flex flex-col xl:grid xl:grid-cols-[3fr_1.1fr] gap-10">
+        <div class="space-y-8 order-2 xl:order-1">
           <div>
             <div class="flex items-baseline justify-between mb-6">
               <h2 class="text-2xl font-medium tracking-tight">Слои конструкции</h2>
@@ -315,14 +321,14 @@
           </div>
         </div>
 
-        <aside>
+        <aside class="order-1 xl:order-2">
           <div class="sticky top-24" id="wall-preview-container-step2">
              </div>
         </aside>
       </div>
     </section>
 
-    <section id="step-3" class="max-w-7xl mx-auto px-12 py-12 w-full hidden space-y-10">
+    <section id="step-3" class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-6 md:py-12 w-full hidden space-y-8 md:space-y-10">
       <div class="max-w-2xl">
         <p class="cad-label-mono mb-3">Сводка по конструкции</p>
         <h2 id="result-title" class="text-3xl font-medium tracking-tight text-balance">Конструкция соответствует нормативу</h2>
@@ -333,8 +339,8 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" id="metrics-container">
         </div>
 
-      <div class="grid grid-cols-1 xl:grid-cols-[1.4fr_1fr] gap-6 items-start">
-        <div class="p-6 lg:p-8 bg-panel rounded-2xl ring-1 ring-border/60 space-y-6">
+      <div class="flex flex-col xl:grid xl:grid-cols-[1.4fr_1fr] gap-6 items-start">
+        <div class="p-6 lg:p-8 bg-panel rounded-2xl ring-1 ring-border/60 space-y-6 order-2 xl:order-1 w-full">
           <div class="flex items-center justify-between gap-6 flex-wrap">
             <div class="max-w-lg">
               <h3 class="text-2xl font-medium">Анализ эффективности</h3>
@@ -372,7 +378,7 @@
           </div>
         </div>
 
-        <div id="wall-preview-container-step3">
+        <div id="wall-preview-container-step3" class="order-1 xl:order-2 w-full">
         </div>
       </div>
     </section>
@@ -423,6 +429,38 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Mobile Drawer Sidebar -->
+  <div id="mobile-sidebar" class="fixed inset-0 z-40 lg:hidden pointer-events-none transition-opacity duration-300 opacity-0">
+    <!-- Backdrop -->
+    <div id="mobile-sidebar-backdrop" class="absolute inset-0 bg-background/80 backdrop-blur-sm cursor-pointer"></div>
+    <!-- Drawer Content -->
+    <aside id="mobile-sidebar-content" class="absolute top-0 bottom-0 left-0 w-72 bg-background border-r border-border/60 flex flex-col p-8 transition-transform duration-300 -translate-x-full">
+      <div class="flex items-center justify-between mb-12">
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-7 h-7 bg-accent-strong rounded-sm flex items-center justify-center">
+            <div class="w-2.5 h-2.5 bg-background rotate-45"></div>
+          </div>
+          <div class="leading-tight">
+            <div class="font-mono text-[11px] tracking-[0.2em] uppercase font-medium text-foreground">ЭКО</div>
+            <div class="font-mono text-[9px] tracking-widest uppercase text-muted-foreground">Constructor</div>
+          </div>
+        </a>
+        <button id="mobile-sidebar-close" class="p-2 hover:bg-panel rounded-md text-muted-foreground hover:text-foreground">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      
+      <nav class="space-y-1" id="nav-menu-mobile">
+        <!-- Populated dynamically -->
+      </nav>
+      
+      <div class="mt-auto p-4 rounded-lg bg-panel ring-1 ring-border/60">
+        <p class="text-[10px] leading-relaxed text-muted-foreground font-medium uppercase tracking-widest mb-2">О приложении</p>
+        <p class="text-xs text-foreground/70 leading-relaxed">Проектирование ограждающих конструкций с учетом теплотехники и углеродного следа.</p>
+      </div>
+    </aside>
   </div>
 
   <script type="module" src="js/app.js"></script>

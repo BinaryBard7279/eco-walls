@@ -427,3 +427,11 @@ body.cad-grid {
   letter-spacing: 0.2em;
   color: oklch(var(--muted-foreground));
 }
+
+/* Мобильная адаптация инпутов */
+@media (max-width: 640px) {
+  .cad-input-large {
+    padding: 1.25rem 1rem !important;
+    font-size: 1.75rem !important;
+  }
+}

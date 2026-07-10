@@ -1,5 +1,6 @@
 export const DOM = {
   get navMenu() { return document.getElementById('nav-menu'); },
+  get navMenuMobile() { return document.getElementById('nav-menu-mobile'); },
   get headerStepCounter() { return document.getElementById('header-step-counter'); },
   get headerTitle() { return document.getElementById('header-title'); },
   get headerExtra() { return document.getElementById('header-extra'); },
@@ -381,6 +382,7 @@ export const ui = {
     }).join('');
     
     if (DOM.navMenu) DOM.navMenu.innerHTML = navHTML;
+    if (DOM.navMenuMobile) DOM.navMenuMobile.innerHTML = navHTML;
   },
 
   renderHeader(state) {
